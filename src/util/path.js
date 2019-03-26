@@ -42,6 +42,9 @@ export function resolvePath (
   return stack.join('/')
 }
 
+/**
+ * 传入一个path路径，解析成路由对象
+ */
 export function parsePath (path: string): {
   path: string;
   query: string;

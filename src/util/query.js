@@ -2,8 +2,19 @@
 
 import { warn } from './warn'
 
+/**
+ * 匹配!'()*字符
+ */
 const encodeReserveRE = /[!'()*]/g
+
+/**
+ * 将输入的字符转换成% + 16进制
+ */
 const encodeReserveReplacer = c => '%' + c.charCodeAt(0).toString(16)
+
+/**
+ * 匹配,对应的url码
+ */
 const commaRE = /%2C/g
 
 // fixed encodeURIComponent which is more conformant to RFC3986:

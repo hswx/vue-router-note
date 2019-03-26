@@ -88,6 +88,15 @@ export default {
   }
 }
 
+/**
+ * 解析属性
+ * 根据传入的config
+ * 如果config是undefined则返回undefined
+ * 如果config是对象则返回config
+ * 如果config是方法则返回该方法的执行结果，参数为route
+ * 如果config是true，则返回route中params的值，否则返回undefined
+ * 如果config不是以上的类型，则提示警告
+ */
 function resolveProps (route, config) {
   switch (typeof config) {
     case 'undefined':

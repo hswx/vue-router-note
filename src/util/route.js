@@ -3,6 +3,9 @@
 import type VueRouter from '../index'
 import { stringifyQuery } from './query'
 
+/**
+ * 匹配最后一个或零个斜杠
+ */
 const trailingSlashRE = /\/?$/
 
 export function createRoute (
